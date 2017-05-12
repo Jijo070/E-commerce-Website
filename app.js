@@ -5,13 +5,24 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressHbs = require('express-handlebars');
+
+var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
+/*var mongoClient = require("mongodb").MongoClient;
+mongoClient.connect("mongodb:ecommgrp1:rwgLHlbEGnzxGS0uGeH5s9RnzPd2tJkMT9BxDRaSOkxs9mf3LJa6kndZXx3Oo7kQtcBugWCuoYK7mcEXAJ3UnQ==@ecommgrp1.documents.azure.com:10250/?ssl=true", function (err, db) {
+ console.log('Minimummm Mongo');
+  
+});  */
+
+mongoose.connect('mongodb://ecommgrp4:f7IsBv4HJKtSqaLNfEMZv5wZKAKjnJcEhYRrzFBNIzL8WDKutTFM4wHehoE5QKwgjwx5BTHdhSqJ7mTCYD73hA==@ecommgrp4.documents.azure.com:10250/shopping?ssl=true');
+
 var index = require('./routes/index');
+//var products = require('./routes/products');
 
 var app = express();
 
-mongoose.connect('localhost:27017/shopping');
+//mongoose.connect('localhost:27017/shopping');
 
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
@@ -25,6 +36,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+/* Make our db accessible to our router
+app.use(function (req, res, next) {
+  req.db = db;
+  next();
+});  */
 app.use('/', index);
 
 // catch 404 and forward to error handler
@@ -46,3 +62,5 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+console.log('Server Running at port 3000')

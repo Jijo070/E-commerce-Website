@@ -33,6 +33,10 @@
 .navbar-default .navbar-nav>li>a {
     color: #fff;
 }
+
+.carousel-inner {
+	    margin-bottom: 25px;
+}
 .carousel-inner>.item>img{
 	height: 300px !important;
 }
@@ -40,6 +44,7 @@
 
 .thumbnail img{
 	max-height: 150 px;
+	height:296px;
 }
 
 .thumbnail .description{
@@ -51,6 +56,61 @@
 	font-size: 16 px;
 }
 
+.list-group {
+    list-style-type: none;
+    float: right;
+}
+
+footer  {
+    padding-top: 20px;
+	background: #00693c;
+    background: -moz-linear-gradient(left,#00693c 0,#002d62 100%);
+    background: -webkit-gradient(linear,left top,right top,color-stop(0%,#00693c),color-stop(100%,#002d62));
+    background: -webkit-linear-gradient(left,#00693c 0,#002d62 100%);
+    background: -o-linear-gradient(left,#00693c 0,#002d62 100%);
+    background: -ms-linear-gradient(left,#00693c 0,#002d62 100%);
+    background: linear-gradient(to right,#00693c 0,#002d62 100%);
+    color: #fff;
+}
+
+footer a, a:hover, a:focus{
+	color: #fff;
+}
+
+footer .navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+address{
+    float: right;
+}
+
+.navbar-brand{
+	font-family: Brush Script Std, Brush Script MT, cursive;
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #fff;
+}
+
+.leg-room p{
+    clear: both;
+    text-align: center;
+}
+
+.footer-logo{
+	display: block;
+    clear: both;
+    text-align: center;
+}
+.footer-logo .head{
+	 clear: both;
+    display: inline-block;
+}
+
+.text-itallic{
+	font-style: italic;
+}
 @media (min-width: 1024px){
 	
 	.navbar-default .navbar-collapse .form-group .form-control{

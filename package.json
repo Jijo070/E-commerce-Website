@@ -10,7 +10,7 @@
     "name": "ADJPP"
   },
   "dependencies": {
-    "azure-search": "0.0.12",
+    "azure-search": "0.0.21",
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
